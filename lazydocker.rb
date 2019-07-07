@@ -2,14 +2,14 @@
 class Lazydocker < Formula
   desc "A simple terminal UI for docker, written in Go"
   homepage "https://github.com/jesseduffield/lazydocker/"
-  version "0.5.4"
+  version "0.5.5"
 
   if OS.mac?
-    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.5.4/lazydocker_0.5.4_Darwin_x86_64.tar.gz"
-    sha256 "72678abd0c8210b17f76f902e1355ed4c83ca5a6a4707fbd46b0366b2cd3fa18"
+    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.5.5/lazydocker_0.5.5_Darwin_x86_64.tar.gz"
+    sha256 "82bb8f56980074da36eeca02750452b4877a411fc3eee7be3f23b661e8ae00e3"
   elsif OS.linux?
-    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.5.4/lazydocker_0.5.4_Linux_x86_64.tar.gz"
-    sha256 "8d37e6cf53c29a5b0ac84ad097ada400c9c896e84f0b64208a442bcff23bca23"
+    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.5.5/lazydocker_0.5.5_Linux_x86_64.tar.gz"
+    sha256 "f7d368b5d91f1f0200eaf6348cab81ef507174eb770de6c16ca4b6a7ac591102"
   end
 
   def install
