@@ -2,16 +2,16 @@
 class Lazydocker < Formula
   desc "A simple terminal UI for docker, written in Go"
   homepage "https://github.com/jesseduffield/lazydocker/"
-  version "0.7.1"
+  version "0.7.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.7.1/lazydocker_0.7.1_Darwin_x86_64.tar.gz"
-    sha256 "2fb65b5f58744d488bfa368978dd1c70bd86d4e7e015c7b164d28aa9f046bf68"
+    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.7.2/lazydocker_0.7.2_Darwin_x86_64.tar.gz"
+    sha256 "a8108cf8bd14a6332872ed3581abf81281cc7e34e9ff67741d126e0516332714"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.7.1/lazydocker_0.7.1_Linux_x86_64.tar.gz"
-      sha256 "9faafeb6a67babad561667d3b0f3a1265084eac254f06b828f08f9daacdfd0f6"
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.7.2/lazydocker_0.7.2_Linux_x86_64.tar.gz"
+      sha256 "cbd3825be0d05e3aaed58ff20029a6e3410d2dba6916cdd5697b2be66ef8af8b"
     end
   end
 
