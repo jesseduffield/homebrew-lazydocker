@@ -2,24 +2,24 @@
 class Lazydocker < Formula
   desc "A simple terminal UI for docker, written in Go"
   homepage "https://github.com/jesseduffield/lazydocker/"
-  version "0.8"
+  version "0.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.8/lazydocker_0.8_Darwin_x86_64.tar.gz"
-    sha256 "088e8cdcdca15e40267480a7271c782ac395f1f382d43c560d6f82b63383d535"
+    url "https://github.com/jesseduffield/lazydocker/releases/download/v0.9/lazydocker_0.9_Darwin_x86_64.tar.gz"
+    sha256 "26d033b188c17baf123afce5dbd3336afd25f13644050705ee53bf0aaedc9393"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.8/lazydocker_0.8_Linux_x86_64.tar.gz"
-      sha256 "3cb328239d414cb91d907c8bf93ab0ab1a9394181e24cd7153f8f29277e46919"
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.9/lazydocker_0.9_Linux_x86_64.tar.gz"
+      sha256 "705c19f29a4651a628f0ada585035d754a0370ac63f7e314038f18b40a917de8"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jesseduffield/lazydocker/releases/download/v0.8/lazydocker_0.8_Linux_arm64.tar.gz"
-        sha256 "e22bed58703ee9362ba861861724396faab444faaaf8a50f4ddbd2a886222353"
+        url "https://github.com/jesseduffield/lazydocker/releases/download/v0.9/lazydocker_0.9_Linux_arm64.tar.gz"
+        sha256 "26c6961474175ba1d6441c8f6f06445cff6902d748d3c967fded270eb761a7ff"
       else
-        url "https://github.com/jesseduffield/lazydocker/releases/download/v0.8/lazydocker_0.8_Linux_armv6.tar.gz"
-        sha256 "08a19a5a1236d6646fc143d77bad37163a957eeddafb5480e667fbb51f82b674"
+        url "https://github.com/jesseduffield/lazydocker/releases/download/v0.9/lazydocker_0.9_Linux_armv6.tar.gz"
+        sha256 "33dc17166f7979903f778f76be6a07492a0cfdc2be4eec619e0e1465c071a353"
       end
     end
   end
