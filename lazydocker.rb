@@ -6,7 +6,6 @@ class Lazydocker < Formula
   desc "A simple terminal UI for docker, written in Go"
   homepage "https://github.com/jesseduffield/lazydocker/"
   version "0.12"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/jesseduffield/lazydocker/releases/download/v0.12/lazydocker_0.12_Darwin_x86_64.tar.gz"
