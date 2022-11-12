@@ -5,20 +5,20 @@
 class Lazydocker < Formula
   desc "A simple terminal UI for docker, written in Go"
   homepage "https://github.com/jesseduffield/lazydocker/"
-  version "0.19.0"
+  version "0.20.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.19.0/lazydocker_0.19.0_Darwin_x86_64.tar.gz"
-      sha256 "353e32fb0f5de5974a720e4c710491a6dad2f929fcb6f24aa9271480369e3662"
+    if Hardware::CPU.arm?
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.20.0/lazydocker_0.20.0_Darwin_arm64.tar.gz"
+      sha256 "109ef95d21981950cd73250f05ad2487e7ddfb8c8b1439ce2a433a7061ad4589"
 
       def install
         bin.install "lazydocker"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.19.0/lazydocker_0.19.0_Darwin_arm64.tar.gz"
-      sha256 "5d314c71aed0c3d3ed08e48f5dfb775e5b8523ad8f7dc96a06d9256c8c9636b2"
+    if Hardware::CPU.intel?
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.20.0/lazydocker_0.20.0_Darwin_x86_64.tar.gz"
+      sha256 "50255862d43d31d92a62de080c9fd01f031ec39206d63d42e9c70d2a4b24c3d9"
 
       def install
         bin.install "lazydocker"
@@ -27,25 +27,25 @@ class Lazydocker < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.19.0/lazydocker_0.19.0_Linux_x86_64.tar.gz"
-      sha256 "510e47f22faa1eaf1506ab13776908ae92ed4245306f94c439fb0aabcd32b443"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.20.0/lazydocker_0.20.0_Linux_armv6.tar.gz"
+      sha256 "33f4cd488b9f98df4f57876ee32a44a615b0d957b4d0d87b14718078e48c94f6"
 
       def install
         bin.install "lazydocker"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.19.0/lazydocker_0.19.0_Linux_armv6.tar.gz"
-      sha256 "151a3e100de96c82fb1bc4c1dc94cd3f8fe9d3fd507569ba23bad451e132aa34"
+    if Hardware::CPU.intel?
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.20.0/lazydocker_0.20.0_Linux_x86_64.tar.gz"
+      sha256 "b025ddbf607d97936382bd60d776fdf8bb2b42da4341e2a2022d821f314b79d3"
 
       def install
         bin.install "lazydocker"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.19.0/lazydocker_0.19.0_Linux_arm64.tar.gz"
-      sha256 "8189781279ba3162a54821199e8ad688e29d20d39bb2ee46e52dbd9a8f5d51aa"
+      url "https://github.com/jesseduffield/lazydocker/releases/download/v0.20.0/lazydocker_0.20.0_Linux_arm64.tar.gz"
+      sha256 "1c318e22be15ef2ae44ed83782e441f1c47db63f97db0aebe46c5f608f1b0400"
 
       def install
         bin.install "lazydocker"
